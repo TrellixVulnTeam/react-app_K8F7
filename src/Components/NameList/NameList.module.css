@@ -1,0 +1,40 @@
+.mainDisplay {
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.cardList {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+}
+
+.displayCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+.todoListButton {
+    width: 25%;
+    margin: 25px auto;
+}
+
+.listButton {
+    height: 40px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.listDisplay {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
