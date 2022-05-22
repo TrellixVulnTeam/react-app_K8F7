@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import UserCard from '../UserCard/UserCard';
 import data from '../../Data/Data';
-// import todoList from "../Data/TodoList";
 import Modal from '../../Hoc/Modal/Modal';
 import Aux from '../../Hoc/Aux/Aux'
 import MainForm from "../Form/Form";
@@ -56,6 +55,21 @@ class NameList extends Component {
     this.setState({ displayModal: !this.state.displayModal });
   }
 
+  statusColor (item) {
+    let color = null;
+
+    if (item === 'Done'){
+      color = 'green'
+    }
+    if(item === 'Not started'){
+      color = 'salmon'
+    }
+    if (item === 'In progress'){
+      color = '#e5e563'
+    }
+    return color;
+  }
+
 
 
   render () {
@@ -66,6 +80,7 @@ class NameList extends Component {
 
     const todoListDisplay = this.state.todo.map((item, index) => {
       return <div className="cardList">
+        <div className="statusColor" style={{backgroundColor: this.statusColor(item.status)}}></div>
         <h4>{item.title}</h4>
         <p>Deadline: {item.deadline}</p>
         <p>Status: {item.status}</p>
