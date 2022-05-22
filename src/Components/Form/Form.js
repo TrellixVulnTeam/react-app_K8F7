@@ -30,7 +30,7 @@ class MainForm extends Component {
                 <form >
                     <input placeholder='Title' value={this.state.title }name='title' onChange={(event) => this.userInput('title', event.target.value)}/>
                     <input placeholder='Deadline' value={this.state.deadline}name='deadline' onChange={(event) => this.userInput('deadline', event.target.value)}/>
-                    <select defaultValue="Status" value={this.state.status} onChange={(event) => this.userInput('status', event.target.value)}>
+                    <select value={this.state.status} onChange={(event) => this.userInput('status', event.target.value)}>
                         <option value="Done">Done</option>
                         <option value="Not Started">Not started</option>
                         <option value="In progress">In progress</option>

@@ -7,6 +7,8 @@ function App() {
 
   const path = window.location.pathname.split('/')
 
+  const id = path[path.length-1]
+
   console.log(path)
 
   return (
@@ -14,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/react-app' element={<NameList />}/>
-          <Route path="/users/:id" element={<InforCard />} />
+          <Route path="/users/:id" element={<InforCard id={path}/>} />
         </Routes>
       </BrowserRouter>
     </div>

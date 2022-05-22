@@ -5,11 +5,12 @@ import Info from '../Info/info';
 
 const InfoCard = (props) => {
 
-  console.log(props.id);
+  const id = window.location.pathname.split('/')
+  const num = id[id.length-1]
 
   return (
     <div>
-      <Info userInfo={data[props.id - 1]}/>
+      <Info userInfo={data[num-1]}/>
     </div>
   )
   
